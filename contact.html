@@ -73,11 +73,7 @@
             border-bottom: 2px solid transparent;
         }
 
-        nav ul li a:hover {
-            color: #ffd700;
-            border-bottom-color: #ffd700;
-        }
-
+        nav ul li a:hover,
         nav ul li a.active {
             color: #ffd700;
             border-bottom-color: #ffd700;
@@ -181,6 +177,14 @@
             font-size: 0.95rem;
         }
 
+        .author {
+            margin-top: 15px;
+            font-size: 1rem;
+            color: #ffd700;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
         @media (max-width: 768px) {
             header h1 {
                 font-size: 2rem;
@@ -201,16 +205,16 @@
     </header>
 
     <nav>
-    <div class="container">
-        <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="about.html">О нас</a></li>
-            <li><a href="specialties.html">Специальности</a></li>
-            <li><a href="teachers.html">Преподаватели</a></li>
-            <li><a href="contact.html">Контакты</a></li>
-        </ul>
-    </div>
-</nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="specialties.html">Специальности</a></li>
+                <li><a href="teachers.html">Преподаватели</a></li>
+                <li><a href="contact.html" class="active">Контакты</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <main>
         <section>
@@ -219,7 +223,7 @@
                 <div class="contact-info">
                     <div class="contact-details">
                         <h3>Свяжитесь с нами</h3>
-                        <p><i class="fas fa-map-marker-alt"></i> г. Луганск, ул. Советская, 58</p>
+                        <p><i class="fas fa-map-marker-alt"></i> г. Луганск, ул. Переяславская, 7</p>
                         <p><i class="fas fa-phone-alt"></i> Приёмная комиссия: <a href="tel:+78572234567">+7 (8572) 23-45-67</a></p>
                         <p><i class="fas fa-phone-alt"></i> Учебная часть: <a href="tel:+78572234568">+7 (8572) 23-45-68</a></p>
                         <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@lkitp.ru">info@lkitp.ru</a></p>
@@ -242,6 +246,9 @@
         <div class="container">
             <p>&copy; 2025 Луганский колледж информационных технологий и предпринимательства. Все права защищены.</p>
             <p style="margin-top: 10px;">Сайт разработан в образовательных целях.</p>
+            <div class="author">
+                <i class="fas fa-code"></i> Сделал Засыпко К.С.
+            </div>
         </div>
     </footer>
 </body>
