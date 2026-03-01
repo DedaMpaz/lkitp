@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛКИТП Луганск | Специальности</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #fff;
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background-color: #2a5298;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+            padding: 5px 0;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #ffd700;
+            border-bottom-color: #ffd700;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #1e3c72;
+            position: relative;
+        }
+
+        section h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #2a5298;
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .specialties-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .specialty-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .specialty-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .specialty-card i {
+            font-size: 3rem;
+            color: #2a5298;
+            margin-bottom: 20px;
+        }
+
+        .specialty-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #1e3c72;
+        }
+
+        .specialty-card p {
+            color: #666;
+        }
+
+        footer {
+            background-color: #1e3c72;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+
+        .author {
+            margin-top: 15px;
+            font-size: 1rem;
+            color: #ffd700;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav ul li {
+                margin: 5px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ЛКИТП Луганск</h1>
+            <p>Луганский колледж информационных технологий и предпринимательства</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="specialties.html" class="active">Специальности</a></li>
+                <li><a href="teachers.html">Преподаватели</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section style="background-color: #f1f5f9;">
+            <div class="container">
+                <h2>Наши специальности</h2>
+                <div class="specialties-grid">
+                    <div class="specialty-card">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Программирование</h3>
+                        <p>Разработка программного обеспечения, веб-технологии, мобильные приложения, базы данных. Срок обучения: 3 года 10 месяцев.</p>
+                    </div>
+                    <div class="specialty-card">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>Компьютерные сети</h3>
+                        <p>Администрирование сетей, кибербезопасность, настройка оборудования. Срок обучения: 3 года 10 месяцев.</p>
+                    </div>
+                    <div class="specialty-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Экономика и бухгалтерский учёт</h3>
+                        <p>Бухгалтерия, анализ хозяйственной деятельности, аудит, налогообложение. Срок обучения: 2 года 10 месяцев.</p>
+                    </div>
+                    <div class="specialty-card">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>Предпринимательство</h3>
+                        <p>Организация бизнеса, маркетинг, менеджмент, правовое обеспечение. Срок обучения: 2 года 10 месяцев.</p>
+                    </div>
+                    <div class="specialty-card">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>Веб-дизайн</h3>
+                        <p>UI/UX дизайн, графика, создание сайтов и приложений. Срок обучения: 3 года 10 месяцев.</p>
+                    </div>
+                    <div class="specialty-card">
+                        <i class="fas fa-robot"></i>
+                        <h3>Искусственный интеллект</h3>
+                        <p>Машинное обучение, анализ данных, нейросети. Срок обучения: 3 года 10 месяцев.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Луганский колледж информационных технологий и предпринимательства. Все права защищены.</p>
+            <p style="margin-top: 10px;">Сайт разработан в образовательных целях.</p>
+            <div class="author">
+                <i class="fas fa-code"></i> Сделал Засыпко К.С.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

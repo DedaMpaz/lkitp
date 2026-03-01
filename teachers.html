@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛКИТП Луганск | Преподаватели</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #fff;
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background-color: #2a5298;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+            padding: 5px 0;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #ffd700;
+            border-bottom-color: #ffd700;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #1e3c72;
+            position: relative;
+        }
+
+        section h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #2a5298;
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .teachers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .teacher-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .teacher-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .teacher-photo {
+            width: 100%;
+            height: 250px;
+            background-color: #2a5298;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 5rem;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        }
+
+        .teacher-info {
+            padding: 20px;
+        }
+
+        .teacher-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: #1e3c72;
+        }
+
+        .teacher-position {
+            color: #2a5298;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .teacher-subject {
+            color: #666;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .teacher-experience {
+            color: #777;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .note {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background: #e8f0fe;
+            border-radius: 10px;
+            color: #1e3c72;
+        }
+
+        footer {
+            background-color: #1e3c72;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+
+        .author {
+            margin-top: 15px;
+            font-size: 1rem;
+            color: #ffd700;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            nav ul li {
+                margin: 5px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ЛКИТП Луганск</h1>
+            <p>Луганский колледж информационных технологий и предпринимательства</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="specialties.html">Специальности</a></li>
+                <li><a href="teachers.html" class="active">Преподаватели</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <div class="container">
+                <h2>Наши преподаватели</h2>
+                <p style="text-align: center; margin-bottom: 30px;">В ЛКИТП работают высококвалифицированные специалисты с многолетним опытом</p>
+                
+                <div class="teachers-grid">
+                    <!-- Сорока Марина Павловна - Директор -->
+                    <div class="teacher-card">
+                        <div class="teacher-photo">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="teacher-info">
+                            <h3>Сорока Марина Павловна</h3>
+                            <div class="teacher-position">Директор колледжа</div>
+                            <div class="teacher-subject">Преподаватель экономических дисциплин</div>
+                            <div class="teacher-experience">
+                                <i class="fas fa-star" style="color: #ffd700;"></i> Высшая квалификационная категория<br>
+                                <i class="fas fa-clock"></i> Педагогический стаж: более 20 лет
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Бухгалтер -->
+                    <div class="teacher-card">
+                        <div class="teacher-photo">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="teacher-info">
+                            <h3>Иващенко Оксана Владимировна</h3>
+                            <div class="teacher-position">Преподаватель бухгалтерского учета</div>
+                            <div class="teacher-subject">Экономика, бухгалтерский учет, налогообложение</div>
+                            <div class="teacher-experience">
+                                <i class="fas fa-star" style="color: #ffd700;"></i> Кандидат экономических наук<br>
+                                <i class="fas fa-clock"></i> Стаж: 18 лет
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Педагог-психолог -->
+                    <div class="teacher-card">
+                        <div class="teacher-photo">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="teacher-info">
+                            <h3>Коваленко Татьяна Николаевна</h3>
+                            <div class="teacher-position">Педагог-психолог</div>
+                            <div class="teacher-subject">Психология, педагогика</div>
+                            <div class="teacher-experience">
+                                <i class="fas fa-star" style="color: #ffd700;"></i> Практикующий психолог<br>
+                                <i class="fas fa-clock"></i> Стаж: 15 лет
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Мастер производственного обучения -->
+                    <div class="teacher-card">
+                        <div class="teacher-photo">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="teacher-info">
+                            <h3>Ткаченко Сергей Иванович</h3>
+                            <div class="teacher-position">Мастер производственного обучения</div>
+                            <div class="teacher-subject">Компьютерные сети, администрирование</div>
+                            <div class="teacher-experience">
+                                <i class="fas fa-star" style="color: #ffd700;"></i> Специалист по сетевым технологиям<br>
+                                <i class="fas fa-clock"></i> Стаж: 12 лет
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Преподаватель программирования -->
+                    <div class="teacher-card">
+                        <div class="teacher-photo">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="teacher-info">
+                            <h3>Шевченко Дмитрий Александрович</h3>
+                            <div class="teacher-position">Преподаватель IT-дисциплин</div>
+                            <div class="teacher-subject">Программирование, веб-технологии, базы данных</div>
+                            <div class="teacher-experience">
+                                <i class="fas fa-star" style="color: #ffd700;"></i> Разработчик ПО<br>
+                                <i class="fas fa-clock"></i> Стаж: 10 лет
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Преподаватель математики -->
+                    <div class="teacher-card">
+                        <div class="teacher-photo">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="teacher-info">
+                            <h3>Петрова Елена Викторовна</h3>
+                            <div class="teacher-position">Преподаватель математики</div>
+                            <div class="teacher-subject">Высшая математика, дискретная математика</div>
+                            <div class="teacher-experience">
+                                <i class="fas fa-star" style="color: #ffd700;"></i> Отличник образования<br>
+                                <i class="fas fa-clock"></i> Стаж: 25 лет
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="note">
+                    <i class="fas fa-info-circle" style="font-size: 1.5rem; margin-right: 10px;"></i>
+                    <p>Информация о преподавателях собрана из открытых источников. Полный список педагогического состава можно уточнить в учебной части колледжа.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Луганский колледж информационных
